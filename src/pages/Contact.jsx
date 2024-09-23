@@ -59,13 +59,13 @@ const Contact = () => {
 };
 
   return (
-    <section className="relative flex lg:flex-row flex-col max-container">
+    <section className="  relative flex lg:flex-row flex-col  bg-[var(--blue-rgb)] gap-[20px] h-[80vh]">
       {alert.show && <Alert {...alert}/>}
       
-      <h1 className="head-text mt-10">Get in touch</h1>
+      <h1 className="deco-1 pt-[100px] pl-[7.5%]">GET IN <br/>TOUCH</h1>
 
-      <form className="w-full flex flex-col gap-7 mt-14" onSubmit={handleSubmit}>
-      <label className="text-black-500 font-semibold"> 
+      <form className="w-full flex flex-col gap-7 pt-[25px] lg:pt-[85px] pl-[7.5%] lg:pl-[70px] pr-[8%] lg:pr-[20%]" onSubmit={handleSubmit}>
+        <label className="text-[var(--white-rgb)] font-semibold form-text"> 
           Name
           <input
             type="text"
@@ -76,7 +76,7 @@ const Contact = () => {
             value={form.name}
             onChange={handleChange}
           />
-        </label><label className="text-black-500 font-semibold"> 
+        </label><label className="text-[var(--white-rgb)] font-semibold form-text"> 
           Email
           <input
             type="email"
@@ -87,11 +87,11 @@ const Contact = () => {
             value={form.email}
             onChange={handleChange}
           />
-        </label><label className="text-black-500 font-semibold"> 
+        </label><label className="text-[var(--white-rgb)] font-semibold form-text"> 
           Your Message
           <textarea
             name="message"
-            rows={4}
+            rows={10}
             className="textarea"
             placeholder='How can I help you?'
             required 

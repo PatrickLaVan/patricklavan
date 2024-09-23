@@ -29,14 +29,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-screen flex items-center py-8 fixed top-0 z-20 ${
+      className={`w-[100%] h-[28px] absolute flex justify-end  top-[55px] z-20 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className='w-screen flex justify-between items-center  mx-auto'>
-        <Link
+      <div className='w-screen flex justify-end pr-[calc(2%+1.3rem)]  mx-auto'>
+        {/* <Link
           to='/'
           className='flex items-center gap-2'
           onClick={() => {
@@ -46,9 +44,9 @@ const Navbar = () => {
         >
           <img onMouseEnter = {() => setHover(true)} onMouseLeave={() => setHover(false)} src={hover ? logo_hover : logo} alt='logo' className='w-15 h-9 object-contain invert' />
 
-        </Link>
+        </Link> */}
 
-        <ul className='list-none hidden md:flex flex-row gap-4 lg:gap-9'>
+        {/* <ul className='list-none hidden  flex-row gap-4 lg:gap-9'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -64,26 +62,40 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-        </ul>
+        </ul> */}
 
-        <div className='md:hidden flex flex-1 justify-end items-center'>
+          {/* mobile Navbar */}
+
+        <div className='flex right-0 z-30 '>
           <img
             src={toggle ? close : menu}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
 
-          <div
+          
+        </div>
+        <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 bg-primary absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-          >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-              {navLinks.map((nav) => (
+            }  menu-container`}
+            >
+            <ul className='menu-liste'>
+              <li>
+                <a className='menu-text' href="">Home</a>
+              </li>
+              <li>
+                <a className='menu-text' href="">Arbeiten</a>
+              </li>
+              <li>
+                <a className='menu-text' href="">Kontakt</a>
+              </li>
+              {/* {navLinks.map((nav) => (
+                
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  className={`font-medium cursor-pointer text-[16px] ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {
@@ -98,10 +110,18 @@ const Navbar = () => {
                     <img  src={isHover === nav.title || active === nav.title  ? nav.icon_hover : nav.icon } alt='logo' className='w-15 h-9 object-contain' />
                   </a>
                 </li>
-              ))}
+              ))} */}
+              <li>
+                <a className='menu-text' href="">Über mich</a>
+              </li>
+              <li>
+                <a className='menu-text' href="">Impressum</a>
+              </li>
+              <li>
+                <a className='menu-text' href="">Datenschutz</a>
+              </li>
             </ul>
           </div>
-        </div>
       </div>
     </nav>
   );

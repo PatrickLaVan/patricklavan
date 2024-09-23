@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <section className="w-screen h-screen relative bg-zinc-800 ">
 
-      <div className='absolute top-[150px] sm:top-[150px] w-[60%] left-[18%] right-0 z-10 flex h-[120px] border-white border-2 rounded-2  ' >
+      <div className='hero-overlay absolute top-[150px] sm:top-[150px] w-[85%] left-[7.5%] right-0 z-10 flex h-[75%] border-white border-2 rounded-2' >
         {currentStage && <HomeInfo currentStage={currentStage} /> }
       </div>
     
@@ -43,25 +43,30 @@ const Home = () => {
         >
           <Suspense fallback={<Loader />}>
             
-            
-            <directionalLight position={[1,4, 1]} intensity={0.4} castShadow="true" shadow-mapSize={1024}>
+            <rectAreaLight/>
+            <directionalLight position={[1,4, 1]} intensity={0.8} castShadow="true" shadow-mapSize={1024}>
               <orthographicCamera attach="shadow-camera" args={[-10, 10, -10, 10, 0.1, 50]} />
             </directionalLight>
             <ambientLight intensity={0.1} />          
             <hemisphereLight skyColor={"#ffffff"} groundColor={"#c19059"} intensity={0.3}/>
 
           
-            <Automat
+            {/* <Automat
               position={automatPosition}
               scale={automatScale}
               rotation={automatRotation}
               isRotating={isRotating}
               setIsRotating={setIsRotating}
               setCurrentStage={setCurrentStage}
-            />
+            /> */}
           </Suspense>
         </Canvas>
-     
+        
+        {/* <div className="custom-shape-divider-bottom-1716635517">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" className="shape-fill"></path>
+          </svg>
+        </div> */}
     </section>
   )
 }

@@ -1,7 +1,9 @@
 import { BrowserRouter } from 'react-router-dom';
 
-import { Home, Work, About, Contact } from './pages'
+import { Home, Work, About, Contact, Test, Hero, Showreel} from './pages'
 import Navbar from './components/Navbaralt';
+
+
 
 const App = () => {
   return (
@@ -9,10 +11,11 @@ const App = () => {
         <BrowserRouter>
           <div>
             <Navbar />
-            <Home/>
+            <Hero/>
           </div>
-          <Work/>
-          <About/>
+          <Showreel/>
+          <Work/> 
+          {/* <About/> */}
           <Contact/> 
         </BrowserRouter>
     </main>
