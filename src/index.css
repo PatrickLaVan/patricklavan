@@ -570,8 +570,6 @@ body:has(.card[data-color="green"]:hover) {
   
 }
 
-
-
 .menu-text {
   font-size: 2rem;
   color: var(--blue-rgb);

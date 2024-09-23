@@ -1,1 +1,1 @@
-export const baseName = "patricklavan.github.io";
+export const baseName = "patricklavan";
