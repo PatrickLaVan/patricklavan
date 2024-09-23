@@ -6,5 +6,10 @@ import { baseName } from "./router";
 export default defineConfig({
   base: `/${baseName}/`,
   plugins: [react()],
+  esbuild: {
+      jsxFactory: "React.createElement",
+      jsxFragment: "React.Fragment",
+    },
   assetsInclude: ['**/*.glb']
 } )
+
