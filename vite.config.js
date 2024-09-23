@@ -4,7 +4,7 @@ import { baseName } from "./router";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: `/${baseName}/`,
+  base: `/${baseName}`,
   plugins: [react()],
   esbuild: {
       jsxFactory: "React.createElement",
