@@ -1,6 +1,6 @@
 {
-  "homepage": "https://PatrickLaVan.github.io/Portfolio",
-  "name": "portfolio-website",
+  "homepage": "https://PatrickLaVan.github.io",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
