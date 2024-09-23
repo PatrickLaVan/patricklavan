@@ -1,5 +1,5 @@
-import { BrowserRouter } from 'react-router-dom';
-
+import { Route, Routes} from 'react-router-dom';
+import { baseName } from '../router';
 import { Home, Work, About, Contact, Test, Hero, Showreel} from './pages'
 import Navbar from './components/Navbaralt';
 
@@ -8,16 +8,16 @@ import Navbar from './components/Navbaralt';
 const App = () => {
   return (
     <main className='bg-slate-300/20'>
-        <BrowserRouter>
-          <div>
-            <Navbar />
-            <Hero/>
-          </div>
-          <Showreel/>
-          <Work/> 
-          {/* <About/> */}
-          <Contact/> 
-        </BrowserRouter>
+        <Routes>
+          <Route path={`/${baseName}`} element= {<Home/>}/>
+              
+          
+            
+          
+          
+        
+           
+        </Routes>
     </main>
   )
 }
